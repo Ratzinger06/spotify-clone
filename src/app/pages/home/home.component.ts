@@ -6,9 +6,7 @@ import { Component, AfterViewInit, ViewChild, ElementRef, OnInit } from '@angula
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit{
-  ngOnInit(): void {
-    throw new Error('Method not implemented.');
-  }
+  ngOnInit(): void {}
   public songCards = [
     {
       thumbnail: "https://e-cdn-images.dzcdn.net/images/cover/742aba8510ba803bea51d304cf2ca786/500x500-000000-80-0-0.jpg",

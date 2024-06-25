@@ -7,6 +7,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./top-nav.component.css']
 })
 export class TopNavComponent implements OnInit{
+  public isSearchFieldVisible: boolean = false;
   constructor(private router: Router){}
   ngOnInit(): void {}
   onNavigateToLogin(){
