@@ -7,16 +7,16 @@
                 class="m-3 text-left"
             >
         </div>
-        <div class="spotify__home-container_side-bar-item">
+        <div class="spotify__home-container_side-bar-item" (click)="onNavigate('home')">
             <a>Home</a>
         </div>
-        <div class="spotify__home-container_side-bar-item">
+        <div class="spotify__home-container_side-bar-item" (click)="onNavigate('search')">
             <a>Search</a>
         </div>
-        <div class="spotify__home-container_side-bar-item">
+        <div class="spotify__home-container_side-bar-item" (click)="onNavigate('library')">
             <a>Your Library</a>
         </div>
-        <div class="spotify__home-container_side-bar-item">
+        <div class="spotify__home-container_side-bar-item" (click)="onNavigate('playlist')">
             <a>Create Playlist</a>
         </div>
     </div>
@@ -30,7 +30,9 @@
                     <app-song-card
                         [playlistThumbnail]="sc.thumbnail" 
                         [title]="sc.title" 
-                        [description]="sc.description">
+                        [description]="sc.description"
+                        [song_id]="sc.song_id"
+                        [link]="sc.song_link">
                     </app-song-card>
                 </div>
             </div>
@@ -42,7 +44,8 @@
                     <app-song-card
                         [playlistThumbnail]="sc.thumbnail" 
                         [title]="sc.title" 
-                        [description]="sc.description">
+                        [description]="sc.description"
+                        [song_id]="sc.song_id">
                     </app-song-card>
                 </div>
             </div>

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { SearchBarService } from 'src/app/services/searchBar.service';
 
 @Component({
   selector: 'app-top-nav',
@@ -8,8 +9,12 @@ import { Router } from '@angular/router';
 })
 export class TopNavComponent implements OnInit{
   public isSearchFieldVisible: boolean = false;
-  constructor(private router: Router){}
-  ngOnInit(): void {}
+  constructor(private router: Router, private sb: SearchBarService){}
+  ngOnInit(): void {
+    this.sb.isSearchVisible.subscribe(status => {
+      this.isSearchFieldVisible = status;
+    })
+  }
   onNavigateToLogin(){
     this.router.navigate(['/','login']);
   }
