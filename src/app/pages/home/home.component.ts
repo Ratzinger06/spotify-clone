@@ -23,7 +23,7 @@ export class HomeComponent implements OnInit{
       thumbnail: "https://e-cdn-images.dzcdn.net/images/cover/742aba8510ba803bea51d304cf2ca786/500x500-000000-80-0-0.jpg",
       title: "Dark Fantasy",
       description: "The plan was to drink until the pain over But whats worse, the pain or the hangover?",
-      song_link: '',
+      song_link: 'assets/Chamba2.mp3',
     },
     {
       song_id: 3,
